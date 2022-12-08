@@ -26,7 +26,7 @@ public class BuscadorPanel extends javax.swing.JPanel {
     HiloCliente h;
 
     /**
-     * Creates new form MoviesBoardPanel
+     * Creates new form BuscadorPanel
      *
      * @param h
      */
@@ -335,15 +335,6 @@ public class BuscadorPanel extends javax.swing.JPanel {
         } catch (DateTimeParseException ex) {
             return false;
         }
-
-    }
-
-    private void traduccion() {
-
-        ResourceBundle rb = ResourceBundle.getBundle("Idiomas.idioma");
-
-        activarTraduccion(rb);
-
     }
 
     private byte[] toByteArray(File file) {
@@ -368,21 +359,4 @@ public class BuscadorPanel extends javax.swing.JPanel {
         return null;
 
     }
-
-    private void activarTraduccion(ResourceBundle rb) {
-
-//        lblGestionAutores.setText(rb.getString("lblGestionAutores"));
-//        lblNombreAutor.setText(rb.getString("lblNombreAutor"));
-//        lblFechaNac.setText(rb.getString("lblFechaNac"));
-//
-//        btnAnadir.setText(rb.getString("btnAñadir"));
-//        camposObligatorios = rb.getString("camposObligatorios");
-//        camposMarcados = rb.getString("camposMarcados");
-//        actorYaExiste = rb.getString("actorYaExiste");
-//        actorAnadido = rb.getString("actorAnadido");
-//        fechaFormato = rb.getString("fechaFormato");
-//        actorNoExiste = rb.getString("actorNoExiste");
-//        actorBorrado = rb.getString("actorBorrado");
-    }
-
 }

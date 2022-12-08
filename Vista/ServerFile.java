@@ -37,8 +37,6 @@ public class ServerFile extends JFrame {
         
         SelectorLenguaje selectorLenguaje = new SelectorLenguaje();
         selectorLenguaje.setVisible(true);
-        
-        
     }
 
 
@@ -56,7 +54,7 @@ public class ServerFile extends JFrame {
 
         jPanel1.setBackground(new Color(255, 255, 255));
 
-        jPanel2.setBackground(new Color(66, 66, 66));
+        jPanel2.setBackground(new Color(66,66,66));
 
         lblEstadoServidor.setFont(new Font("Tahoma", Font.BOLD, 12)); // NOI18N
         lblEstadoServidor.setForeground(new Color(204, 0, 51));

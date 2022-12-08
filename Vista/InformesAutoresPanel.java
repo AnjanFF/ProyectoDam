@@ -29,6 +29,7 @@ import net.sf.jasperreports.view.JasperViewer;
 /**
  *
  * @author Angel Flores
+ * 
  */
 public class InformesAutoresPanel extends javax.swing.JPanel {
 

@@ -24,6 +24,11 @@ import javax.help.HelpBroker;
 import javax.help.HelpSet;
 import javax.help.HelpSetException;
 import javax.swing.JOptionPane;
+import java.awt.GridLayout;
+import java.awt.Dimension;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  *
@@ -42,7 +47,7 @@ public class GestionColeccionesPanel extends javax.swing.JPanel {
     private Object camposObligatorios;
 
     /**
-     * Creates new form MoviesBoardPanel
+     * Creates new form GestionColeccionesPanel
      *
      * @param h
      */
@@ -50,10 +55,11 @@ public class GestionColeccionesPanel extends javax.swing.JPanel {
         initComponents();
 
         this.h = h;
+        setLayout(new GridLayout(0, 1, 0, 0));
+        add(jScrollPane2);
 
         refrescarTabla();
 
-        //activarAyuda();
         traduccion();
     }
 
@@ -80,7 +86,7 @@ public class GestionColeccionesPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText("");
-        setPreferredSize(new java.awt.Dimension(518, 491));
+        setPreferredSize(new Dimension(634, 594));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setToolTipText("");
@@ -124,68 +130,50 @@ public class GestionColeccionesPanel extends javax.swing.JPanel {
         cmbEdicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especial", "Limitada", "Coleccionista", "Básica" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEliminar)
-                .addGap(46, 46, 46))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAnadir)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblNombre)
-                                .addComponent(lblEdicion))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNombre)
-                                .addComponent(cmbEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblGestionColecciones, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+        	jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(32)
+        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+        					.addComponent(btnAnadir)
+        					.addGroup(jPanel1Layout.createSequentialGroup()
+        						.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        							.addComponent(lblNombre)
+        							.addComponent(lblEdicion))
+        						.addGap(18)
+        						.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
+        							.addComponent(txtNombre)
+        							.addComponent(cmbEdicion, GroupLayout.PREFERRED_SIZE, 205, GroupLayout.PREFERRED_SIZE)
+        							.addComponent(btnEliminar, Alignment.TRAILING))))
+        				.addComponent(lblGestionColecciones, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(lblGestionColecciones, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEliminar)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEdicion)
-                    .addComponent(cmbEdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(btnAnadir)
-                .addContainerGap(95, Short.MAX_VALUE))
+        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(19)
+        			.addComponent(lblGestionColecciones, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+        			.addGap(18)
+        			.addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
+        			.addGap(23)
+        			.addComponent(btnEliminar)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(lblNombre)
+        				.addComponent(txtNombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(18)
+        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(lblEdicion)
+        				.addComponent(cmbEdicion, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(27)
+        			.addComponent(btnAnadir)
+        			.addContainerGap(95, Short.MAX_VALUE))
         );
+        jPanel1.setLayout(jPanel1Layout);
 
         jScrollPane2.setViewportView(jPanel1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 158, Short.MAX_VALUE))
-        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -308,30 +296,6 @@ public class GestionColeccionesPanel extends javax.swing.JPanel {
         coleccionCreada = rb.getString("coleccionCreada");
         errorCreadoColeccion = rb.getString("errorCreadoColeccion");
         
-
-    }
-
-    private void activarAyuda() {
-
-        try {
-
-            URL url;
-
-            if (Locale.getDefault().getLanguage().equalsIgnoreCase("gl")) {
-                url = this.getClass().getResource("/ayuda/gal/help.hs");
-            } else {
-                url = this.getClass().getResource("/ayuda/esp/help.hs");
-
-            }
-
-            // Crea el HelpSet y el HelpBroker
-            HelpSet helpset = new HelpSet(null, url);
-            HelpBroker hb = helpset.createHelpBroker();
-
-            hb.enableHelpKey(txtNombre, "panelcolecciones", helpset);
-        } catch (HelpSetException ex) {
-            Logger.getLogger(PaginaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
 
     }
     
