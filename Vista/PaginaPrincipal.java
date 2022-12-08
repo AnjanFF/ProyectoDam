@@ -23,6 +23,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
 
 /**
  *
@@ -83,11 +85,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         btnInformeAutores = new javax.swing.JButton();
-        btnAyuda = new javax.swing.JButton();
-        btnInformeComics = new javax.swing.JButton();
         btnBuscador = new javax.swing.JButton();
-        btnColecciones = new javax.swing.JButton();
-        btnComics = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         lblPanelControl = new javax.swing.JLabel();
@@ -106,8 +104,8 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         jPanel4.setLayout(new BorderLayout());
 
         jPanel1.setBackground(new Color(66, 66, 66));
-        jPanel1.setPreferredSize(new Dimension(190, 513));
-        jPanel1.setLayout(new BorderLayout());
+        jPanel1.setPreferredSize(new Dimension(190, 50));
+        jPanel1.setLayout(new BoxLayout(jPanel1, BoxLayout.X_AXIS));
 
         jPanel2.setBackground(new Color(66, 66, 66));
         jPanel2.setBackground(new Color(66, 66, 66));
@@ -115,31 +113,14 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         ComicsManager.setFont(new Font("Tahoma", 1, 18));
         ComicsManager.setForeground(new Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2Layout.setHorizontalGroup(
-        	jPanel2Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel2Layout.createSequentialGroup()
-        			.addContainerGap()
-        			.addComponent(ComicsManager, GroupLayout.PREFERRED_SIZE, 172, GroupLayout.PREFERRED_SIZE)
-        			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-        	jPanel2Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel2Layout.createSequentialGroup()
-        			.addGap(20)
-        			.addComponent(ComicsManager, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-        			.addContainerGap(19, Short.MAX_VALUE))
-        );
-        jPanel2.setLayout(jPanel2Layout);
-
-        jPanel1.add(jPanel2, BorderLayout.PAGE_START);
+        jPanel1.add(jPanel2);
+        jPanel2.setLayout(new BoxLayout(jPanel2, BoxLayout.X_AXIS));
+        jPanel2.add(ComicsManager);
 
         jPanel3.setBackground(new Color(66, 66, 66));
-        jPanel3.setLayout(new BorderLayout());
 
         jPanel5.setBackground(new Color(66, 66, 66));
         jPanel5.setForeground(new Color(0, 102, 255));
-        jPanel5.setLayout(new BorderLayout());
 
         btnAutores.setBackground(new Color(66, 66, 66));
         btnAutores.setFont(new Font("Tahoma", 1, 14));
@@ -151,19 +132,42 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 btnAutoresActionPerformed(evt);
             }
         });
-        jPanel5.add(btnAutores, BorderLayout.PAGE_START);
+        jPanel5.setLayout(new BoxLayout(jPanel5, BoxLayout.X_AXIS));
+        btnComics = new javax.swing.JButton();
+        jPanel5.add(btnComics);
+        
+                btnComics.setBackground(new Color(66, 66, 66));
+                btnComics.setFont(new Font("Tahoma", 1, 14));
+                btnComics.setForeground(new Color(255, 255, 255));
+                btnComics.setText("Cómics");
+                btnComics.setBorderPainted(false);
+                btnComics.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnComicsActionPerformed(evt);
+                    }
+                });
+        btnColecciones = new javax.swing.JButton();
+        jPanel5.add(btnColecciones);
+        
+                btnColecciones.setBackground(new Color(66, 66, 66));
+                btnColecciones.setFont(new Font("Tahoma", 1, 14)); // NOI18N
+                btnColecciones.setForeground(new Color(255, 255, 255));
+                btnColecciones.setText("Colecciones");
+                btnColecciones.setBorderPainted(false);
+                btnColecciones.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnColeccionesActionPerformed(evt);
+                    }
+                });
+        jPanel5.add(btnAutores);
 
         jPanel6.setBackground(new Color(66, 66, 66));
-        jPanel6.setLayout(new BorderLayout());
 
         jPanel9.setBackground(new Color(66, 66, 66));
-        jPanel9.setLayout(new BorderLayout());
 
         jPanel10.setBackground(new Color(66, 66, 66));
-        jPanel10.setLayout(new BorderLayout());
 
         jPanel11.setBackground(new Color(66, 66, 66));
-        jPanel11.setLayout(new BorderLayout());
 
         btnInformeAutores.setBackground(new Color(66, 66, 66));
         btnInformeAutores.setFont(new Font("Tahoma", 1, 14));
@@ -175,35 +179,27 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 btnInformeAutoresActionPerformed(evt);
             }
         });
-        jPanel11.add(btnInformeAutores, BorderLayout.PAGE_START);
+        jPanel11.setLayout(new BoxLayout(jPanel11, BoxLayout.X_AXIS));
+        btnInformeComics = new javax.swing.JButton();
+        jPanel11.add(btnInformeComics);
+        
+                btnInformeComics.setBackground(new Color(66, 66, 66));
+                btnInformeComics.setFont(new Font("Tahoma", 1, 14)); 
+                btnInformeComics.setForeground(new Color(255, 255, 255));
+                btnInformeComics.setText("Informes de cómics");
+                btnInformeComics.setBorderPainted(false);
+                btnInformeComics.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnInformeComicsActionPerformed(evt);
+                    }
+                });
+        jPanel11.add(btnInformeAutores);
+        jPanel10.setLayout(new BoxLayout(jPanel10, BoxLayout.X_AXIS));
 
-        btnAyuda.setBackground(new Color(66, 66, 66));
-        btnAyuda.setFont(new Font("Tahoma", 1, 14));
-        btnAyuda.setForeground(new Color(255, 255, 255));
-        btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ayuda/imagenes/ayuda1 (2).png"))); // NOI18N
-        btnAyuda.setBorderPainted(false);
-        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAyudaActionPerformed(evt);
-            }
-        });
-        jPanel11.add(btnAyuda, BorderLayout.PAGE_END);
+        jPanel10.add(jPanel11);
+        jPanel9.setLayout(new BoxLayout(jPanel9, BoxLayout.X_AXIS));
 
-        jPanel10.add(jPanel11, BorderLayout.CENTER);
-
-        btnInformeComics.setBackground(new Color(66, 66, 66));
-        btnInformeComics.setFont(new Font("Tahoma", 1, 14)); 
-        btnInformeComics.setForeground(new Color(255, 255, 255));
-        btnInformeComics.setText("Informes de cómics");
-        btnInformeComics.setBorderPainted(false);
-        btnInformeComics.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInformeComicsActionPerformed(evt);
-            }
-        });
-        jPanel10.add(btnInformeComics, BorderLayout.PAGE_START);
-
-        jPanel9.add(jPanel10, BorderLayout.CENTER);
+        jPanel9.add(jPanel10);
 
         btnBuscador.setBackground(new Color(66, 66, 66));
         btnBuscador.setFont(new Font("Tahoma", 1, 14)); 
@@ -215,41 +211,32 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 btnBuscadorActionPerformed(evt);
             }
         });
-        jPanel9.add(btnBuscador, BorderLayout.PAGE_START);
+        jPanel6.setLayout(new BoxLayout(jPanel6, BoxLayout.X_AXIS));
+        jPanel9.add(btnBuscador);
 
-        jPanel6.add(jPanel9, BorderLayout.CENTER);
+        jPanel6.add(jPanel9);
+        jPanel3.setLayout(new BoxLayout(jPanel3, BoxLayout.X_AXIS));
 
-        btnColecciones.setBackground(new Color(66, 66, 66));
-        btnColecciones.setFont(new Font("Tahoma", 1, 14)); // NOI18N
-        btnColecciones.setForeground(new Color(255, 255, 255));
-        btnColecciones.setText("Colecciones");
-        btnColecciones.setBorderPainted(false);
-        btnColecciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColeccionesActionPerformed(evt);
-            }
-        });
-        jPanel6.add(btnColecciones, BorderLayout.PAGE_START);
+        jPanel5.add(jPanel6);
 
-        jPanel5.add(jPanel6, BorderLayout.CENTER);
+        jPanel3.add(jPanel5);
 
-        jPanel3.add(jPanel5, BorderLayout.CENTER);
+        jPanel1.add(jPanel3);
+        btnAyuda = new javax.swing.JButton();
+        jPanel3.add(btnAyuda);
+        
+                btnAyuda.setBackground(new Color(66, 66, 66));
+                btnAyuda.setFont(new Font("Tahoma", 1, 14));
+                btnAyuda.setForeground(new Color(255, 255, 255));
+                btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ayuda/imagenes/ayuda1 (2).png"))); // NOI18N
+                btnAyuda.setBorderPainted(false);
+                btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnAyudaActionPerformed(evt);
+                    }
+                });
 
-        btnComics.setBackground(new Color(66, 66, 66));
-        btnComics.setFont(new Font("Tahoma", 1, 14));
-        btnComics.setForeground(new Color(255, 255, 255));
-        btnComics.setText("Cómics");
-        btnComics.setBorderPainted(false);
-        btnComics.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnComicsActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnComics, BorderLayout.PAGE_START);
-
-        jPanel1.add(jPanel3, BorderLayout.CENTER);
-
-        jPanel4.add(jPanel1, BorderLayout.LINE_START);
+        jPanel4.add(jPanel1, BorderLayout.NORTH);
 
         jPanel7.setBackground(new Color(255, 255, 255));
         jPanel7.setLayout(new BorderLayout());
@@ -270,7 +257,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         lblBienvenida.setFont(new Font("Tahoma", 1, 18)); 
         lblBienvenida.setText("Bienvenido a Quenda Gestión Cómics");
 
-        lblSubtitulo.setText("Pulsa sobre una de las opciones del menú lateral para empezar a gestionar");
+        lblSubtitulo.setText("Pulsa sobre una de las opciones del menú superior para empezar a gestionar");
 
         jPanel7.add(content, BorderLayout.CENTER);
         content.setLayout(new GridLayout(0, 1, 0, 0));
@@ -280,6 +267,9 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         jPanel4.add(jPanel7, BorderLayout.CENTER);
 
         getContentPane().add(jPanel4, BorderLayout.CENTER);
+        
+        panel = new JPanel();
+        getContentPane().add(panel, BorderLayout.NORTH);
 
         pack();
         setLocationRelativeTo(null);
@@ -404,6 +394,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblBienvenida;
     private javax.swing.JLabel lblPanelControl;
     private javax.swing.JLabel lblSubtitulo;
+    private JPanel panel;
 
     private void activarAyuda() {
 
