@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo.Tabla;
 
 import Controlador.HiloCliente;
@@ -50,8 +45,6 @@ public class TablaComics extends AbstractTableModel {
         this.columnasTabla = new String[]{"Portada", "Nombre", "Tapa", "Fecha adquisición", "Estado"};
         this.listaComics = listaComics;
     }
-
-    @Override //Redefinimos el método getColumnClass
     public Class getColumnClass(int column) {
         switch (column) {
             case 0:
@@ -91,7 +84,6 @@ public class TablaComics extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        // TODO Auto-generated method stub
         if (rowIndex != -1 && listaComics.size() > rowIndex) {
             try {
                 Comic u = listaComics.get(rowIndex);
@@ -103,9 +95,9 @@ public class TablaComics extends AbstractTableModel {
                             BufferedImage img = ImageIO.read(new ByteArrayInputStream(u.getPortada()));
                             ImageIcon icon = new ImageIcon(img);
 
-                            Image image = icon.getImage(); // transform it 
-                            Image newimg = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH); // scale it the smooth way
-                            ImageIcon imageIcon = new ImageIcon(newimg);  // transform it back
+                            Image image = icon.getImage();
+                            Image newimg = image.getScaledInstance(120, 180, Image.SCALE_SMOOTH); 
+                            ImageIcon imageIcon = new ImageIcon(newimg); 
 
                             return imageIcon;
 

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo.Tabla;
 
 import Modelo.Autor;
@@ -99,9 +95,9 @@ public class TablaAutores extends AbstractTableModel {
                             BufferedImage img = ImageIO.read(new ByteArrayInputStream(u.getFoto()));
                             ImageIcon icon = new ImageIcon(img);
                             
-                            Image image = icon.getImage(); // transform it 
-                            Image newimg = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH); // scale it the smooth way
-                            ImageIcon imageIcon = new ImageIcon(newimg);  // transform it back
+                            Image image = icon.getImage();
+                            Image newimg = image.getScaledInstance(100, 140, Image.SCALE_SMOOTH); 
+                            ImageIcon imageIcon = new ImageIcon(newimg);
 
                             return imageIcon;
                             
