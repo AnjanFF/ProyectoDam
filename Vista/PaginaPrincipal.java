@@ -228,7 +228,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 btnAyuda.setBackground(new Color(66, 66, 66));
                 btnAyuda.setFont(new Font("Tahoma", 1, 14));
                 btnAyuda.setForeground(new Color(255, 255, 255));
-                btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ayuda/imagenes/ayuda1 (2).png"))); // NOI18N
+                btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ayuda/imagenes/ayuda1 (3).png"))); 
                 btnAyuda.setBorderPainted(false);
                 btnAyuda.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,7 +289,7 @@ public class PaginaPrincipal extends javax.swing.JFrame {
         content.repaint();
     }
 
-    private void btnColeccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColeccionesActionPerformed
+    private void btnColeccionesActionPerformed(java.awt.event.ActionEvent evt) {
         GestionColeccionesPanel actorsMoviesPanel = new GestionColeccionesPanel(h);
         actorsMoviesPanel.setSize(600, 491);
         actorsMoviesPanel.setLocation(0, 0);
