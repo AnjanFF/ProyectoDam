@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/bcprov-jdk15on-1.68.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/commons-beanutils-1.9.4.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/commons-collections4-4.2.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/ecj-3.21.0.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/itext-2.1.7.js9.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jackson-annotations-2.13.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jackson-core-2.13.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jackson-databind-2.13.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jackson-dataformat-xml-2.13.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jasperreports-6.19.0.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/stax2-api-4.2.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/JasperReportsLibraries/woodstox-core-6.2.7.jar"/>
+	<classpathentry kind="lib" path="Librerias/javahelp-2.0.05.jar"/>
+	<classpathentry kind="lib" path="Librerias/javahelp-2.0.06.jar"/>
+	<classpathentry kind="lib" path="Librerias/JDateChooser/DateChooser.jar"/>
+	<classpathentry kind="lib" path="Librerias/MySQLConnector/mysql-connector-java-8.0.23.jar"/>
+	<classpathentry kind="lib" path="Librerias/MySQLConnector/protobuf-java-3.11.4.jar"/>
+	<classpathentry kind="lib" path="proyectocomic.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
