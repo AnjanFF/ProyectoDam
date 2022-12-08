@@ -36,6 +36,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.FlowLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Color;
 
 /**
  *
@@ -59,7 +60,7 @@ public class GestionComicsPanel extends javax.swing.JPanel {
     private String noExisteComic;
 
     /**
-     * Creates new form MoviesBoardPanel
+     * Creates new form GestionComicsPanel
      *
      * @param h Class HiloCliente
      */
@@ -67,7 +68,7 @@ public class GestionComicsPanel extends javax.swing.JPanel {
         initComponents();
 
         this.h = h;
-        setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        setLayout(new GridLayout(0, 1, 0, 0));
         add(jPanel1);
         jPanel1.setLayout(new GridLayout(0, 1, 0, 0));
         jPanel1.add(jScrollPane1);
@@ -89,6 +90,7 @@ public class GestionComicsPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+        jPanel2.setForeground(Color.WHITE);
         jPanel3 = new javax.swing.JPanel();
         lblGestionComics = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -111,20 +113,20 @@ public class GestionComicsPanel extends javax.swing.JPanel {
         btnBorrarComic = new javax.swing.JButton();
         btnModificarComic = new javax.swing.JButton();
         lblFoto = new javax.swing.JLabel();
-        lblColeccion = new javax.swing.JLabel();
+        lblColeccion =new javax.swing.JLabel();
         cmbColeccion = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText("");
-        setPreferredSize(new Dimension(786, 695));
+        setPreferredSize(new Dimension(824, 845));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(Color.WHITE);
         jPanel2.setToolTipText("");
         jPanel2.setPreferredSize(new java.awt.Dimension(700, 635));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(Color.WHITE);
 
         lblGestionComics.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblGestionComics.setText("Gestión de cómics");
@@ -141,7 +143,7 @@ public class GestionComicsPanel extends javax.swing.JPanel {
             }
         ));
         tablaComics.setFillsViewportHeight(true);
-        tablaComics.setRowHeight(75);
+        tablaComics.setRowHeight(80);
         jScrollPane3.setViewportView(tablaComics);
 
         lblAnhadir.setText("Añadir un cómic");
@@ -236,84 +238,80 @@ public class GestionComicsPanel extends javax.swing.JPanel {
     javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
     jPanel3Layout.setHorizontalGroup(
     	jPanel3Layout.createParallelGroup(Alignment.LEADING)
-    		.addGroup(jPanel3Layout.createSequentialGroup()
-    			.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
-    				.addGroup(jPanel3Layout.createSequentialGroup()
+    		.addGroup(Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+    			.addContainerGap()
+    			.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING)
+    				.addGroup(Alignment.LEADING, jPanel3Layout.createSequentialGroup()
     					.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
     						.addGroup(jPanel3Layout.createSequentialGroup()
-    							.addGap(29)
+    							.addGap(71)
     							.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING)
     								.addGroup(jPanel3Layout.createSequentialGroup()
-    									.addComponent(lblColeccion, GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-    									.addGap(73)
-    									.addComponent(cmbColeccion, 0, 227, Short.MAX_VALUE))
+    									.addComponent(lblColeccion, GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+    									.addGap(18)
+    									.addComponent(cmbColeccion, GroupLayout.PREFERRED_SIZE, 229, GroupLayout.PREFERRED_SIZE))
     								.addGroup(jPanel3Layout.createSequentialGroup()
-    									.addGap(42)
     									.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
     										.addGroup(jPanel3Layout.createSequentialGroup()
-    											.addComponent(lblTítulo, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    											.addComponent(lblTítulo, GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
     											.addGap(29))
-    										.addComponent(lblFechaAdquisicion, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    										.addComponent(lblFechaAdquisicion, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
     										.addGroup(jPanel3Layout.createSequentialGroup()
-    											.addComponent(lblTapa, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    											.addComponent(lblTapa, GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
     											.addGap(31))
     										.addGroup(jPanel3Layout.createSequentialGroup()
-    											.addComponent(lblEstado, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    											.addComponent(lblEstado, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
     											.addGap(22))
     										.addGroup(jPanel3Layout.createSequentialGroup()
-    											.addComponent(txtAutor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    											.addComponent(txtAutor, GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
     											.addGap(28))
     										.addGroup(jPanel3Layout.createSequentialGroup()
-    											.addComponent(lblPortada, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+    											.addComponent(lblPortada, GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
     											.addGap(17)))
     									.addGap(18)
-    									.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
+    									.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING, false)
     										.addComponent(txtTapa, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
     										.addComponent(dateChooserCombo, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
     										.addComponent(txtTitulo, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
     										.addComponent(cmbEstado, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
-    										.addComponent(cmbAutor, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    										.addComponent(txtRutaImagen, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)))
-    								.addGroup(jPanel3Layout.createSequentialGroup()
-    									.addGap(258)
-    									.addComponent(btnAnhadirComic, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+    										.addComponent(cmbAutor, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
+    										.addComponent(txtRutaImagen, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)))))
     						.addGroup(jPanel3Layout.createSequentialGroup()
-    							.addComponent(lblAnhadir, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-    							.addGap(319)))
-    					.addPreferredGap(ComponentPlacement.UNRELATED)
+    							.addComponent(lblAnhadir)
+    							.addPreferredGap(ComponentPlacement.RELATED, 329, Short.MAX_VALUE)))
+    					.addGap(0)
     					.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
     						.addGroup(jPanel3Layout.createSequentialGroup()
-    							.addComponent(btnModificarComic, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+    							.addComponent(btnModificarComic, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
     							.addPreferredGap(ComponentPlacement.UNRELATED)
-    							.addComponent(btnBorrarComic, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+    							.addComponent(btnBorrarComic, GroupLayout.PREFERRED_SIZE, 64, Short.MAX_VALUE)
     							.addGap(70))
     						.addGroup(jPanel3Layout.createSequentialGroup()
-    							.addComponent(btnPortada, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+    							.addComponent(btnPortada, GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
     							.addGap(29)
-    							.addComponent(lblFoto, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
-    				.addGroup(jPanel3Layout.createSequentialGroup()
-    					.addContainerGap()
-    					.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
-    						.addComponent(jScrollPane3, GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
-    						.addGroup(jPanel3Layout.createSequentialGroup()
-    							.addComponent(lblGestionComics, GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-    							.addGap(325)))
-    					.addGap(61)))
-    			.addGap(502))
+    							.addComponent(lblFoto, GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))))
+    				.addGroup(Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+    					.addGap(253)
+    					.addComponent(btnAnhadirComic)
+    					.addPreferredGap(ComponentPlacement.RELATED, 265, GroupLayout.PREFERRED_SIZE))
+    				.addComponent(jScrollPane3, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 595, GroupLayout.PREFERRED_SIZE)
+    				.addGroup(Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+    					.addComponent(lblGestionComics, GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+    					.addGap(386)))
+    			.addGap(98))
     );
     jPanel3Layout.setVerticalGroup(
     	jPanel3Layout.createParallelGroup(Alignment.TRAILING)
     		.addGroup(jPanel3Layout.createSequentialGroup()
     			.addContainerGap()
-    			.addComponent(lblGestionComics, GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+    			.addComponent(lblGestionComics, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     			.addPreferredGap(ComponentPlacement.RELATED)
-    			.addComponent(jScrollPane3, GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-    			.addPreferredGap(ComponentPlacement.RELATED)
-    			.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING)
+    			.addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE)
+    			.addGap(34)
+    			.addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING)
     				.addComponent(lblAnhadir)
-    				.addGroup(jPanel3Layout.createParallelGroup(Alignment.BASELINE)
-    					.addComponent(btnModificarComic)
-    					.addComponent(btnBorrarComic)))
+    				.addComponent(btnModificarComic)
+    				.addComponent(btnBorrarComic))
     			.addGap(18)
     			.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING)
     				.addGroup(jPanel3Layout.createSequentialGroup()
@@ -346,11 +344,11 @@ public class GestionComicsPanel extends javax.swing.JPanel {
     					.addComponent(lblFoto, GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)))
     			.addPreferredGap(ComponentPlacement.UNRELATED)
     			.addGroup(jPanel3Layout.createParallelGroup(Alignment.BASELINE)
-    				.addComponent(lblColeccion)
-    				.addComponent(cmbColeccion, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-    			.addGap(18)
+    				.addComponent(cmbColeccion, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+    				.addComponent(lblColeccion))
+    			.addPreferredGap(ComponentPlacement.UNRELATED)
     			.addComponent(btnAnhadirComic)
-    			.addGap(106))
+    			.addGap(75))
     );
     jPanel3.setLayout(jPanel3Layout);
 
